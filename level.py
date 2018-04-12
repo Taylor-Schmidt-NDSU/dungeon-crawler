@@ -1,0 +1,29 @@
+from map import Map
+from player import Player
+
+class Level():
+	map
+	players = []
+	enemies = []
+	
+	def Level(self, level_number, players):
+
+		#TODO: dynamically create enemies based on level_number
+		
+		
+		#Will set up players, enemies, and map
+		self.initialize()
+	def update(self):
+		self.map.update()
+		for player in self.players:
+			player.update()
+		for enemy in self.enemies:
+			enemy.update()
+	
+	#TODO make it move player and enemies to correct location		
+	def initialize(self):
+		self.map = Map()
+		for player
+	generate_players():
+	generate_enemies(num_of_enemies):
+	
