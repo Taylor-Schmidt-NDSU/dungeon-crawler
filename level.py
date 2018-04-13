@@ -6,7 +6,7 @@ class Level():
 	players = []
 	enemies = []
 	
-	def Level(self, level_number, players):
+	def __init__(self, level_number, players):
 
 		#TODO: dynamically create enemies based on level_number
 		
