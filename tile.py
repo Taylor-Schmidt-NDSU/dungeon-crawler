@@ -8,7 +8,7 @@ class Tile():
 		self.traversable = True
 	def update(self):
 		#add generic update function if needed
-		
+		pass
 class TrapTile(Tile):
 	def TrapTile(self, image, location, damage):
 		self.super(image, location)
