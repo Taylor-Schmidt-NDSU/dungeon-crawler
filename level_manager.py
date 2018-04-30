@@ -4,7 +4,7 @@ Created on Apr 12, 2018
 @author: taylor.n.schmidt
 '''
 from level import Level
-
+from player import Player
 class Level_Manager():
     '''
     classdocs
@@ -34,4 +34,4 @@ class Level_Manager():
     
     def __init__(self):
         if not Level_Manager.instance:
-            Level_Manager.instance = Level_Manager.__LevelManager()
+            Level_Manager.instance = Level_Manager.__LevelManager(Player())
