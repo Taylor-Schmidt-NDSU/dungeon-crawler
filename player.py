@@ -9,12 +9,12 @@ class Player(Character):
     '''
     classdocs
     '''
-
+    max_health = 100
 
     def __init__(self, params):
         '''
         Constructor
         '''
-        self.super.__init__()
+        self.super.__init__(self.max_health)
         
     
