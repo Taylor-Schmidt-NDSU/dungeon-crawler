@@ -23,12 +23,12 @@ class Level_Manager():
         def get_current_level(self):
             return self.level
         
-        def leave_level(self, score = 0):
-            #figure out of having a dedicated title screen will be best
-            #self.level = titlescreen
-            pass
+        def leave_level(self):
+            return self.players
         
-        
+        def advance_level(self):
+            self.load_level(self.level.level_number, self.leave_level())
+
     def __getattr__(self, name):
         return getattr(self.instance, name)
     
