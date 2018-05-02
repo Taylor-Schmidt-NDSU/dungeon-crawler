@@ -20,4 +20,6 @@ class Map():
 		for tile in self.tiles:
 			tile.update()
 	
-	
+	def draw(self, screen):
+		for tile in self.tiles:
+			tile.draw()
