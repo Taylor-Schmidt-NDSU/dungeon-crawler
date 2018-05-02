@@ -1,6 +1,6 @@
 from map import Map
 from player import Player
-
+import constants
 
 class Level():
 	map
@@ -26,6 +26,13 @@ class Level():
 	#TODO make it move player and enemies to correct location		
 	def initialize(self):
 		self.map = Map()
-		
-	generate_enemies(num_of_enemies):
 	
+	def draw(self, screen):
+		#clear the screen
+		screen.fill(constants.WHITE)
+		#draw everything
+		self.map.draw(screen)
+		for enemy in self.enemies:
+			enemy.draw(screen)
+		for player in self.players:
+			player.draw(screen)
