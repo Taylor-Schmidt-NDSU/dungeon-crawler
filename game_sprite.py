@@ -13,6 +13,7 @@ class GameSprite(pygame.sprite.Sprite):
 
     def __init__(self, image_details):
         '''
+        image_details [image_name, columns, rows]
         will create frame_image and frames[] automatically so it has required attributes for sprite class
         '''
         super().__init__()
