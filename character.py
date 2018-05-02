@@ -3,9 +3,9 @@ Created on Apr 30, 2018
 
 @author: taylor.n.schmidt
 '''
-from game_object import Game_Object
+from game_sprite import GameSprite
 
-class Character(Game_Object):
+class Character(GameSprite):
     '''
     classdocs
     '''

@@ -4,7 +4,7 @@ Created on Apr 30, 2018
 @author: taylor.n.schmidt
 '''
 import pygame
-from level_manager import Level_Manager
+from level_manager import LevelManager
 # Initialize Pygame
 
 pygame.init()
@@ -15,7 +15,7 @@ screen = pygame.display.set_mode([constants.SCREEN_WIDTH,
 
 clock = pygame.time.Clock()
  
-level_manager = Level_Manager()
+level_manager = LevelManager()
 
 
 done = False

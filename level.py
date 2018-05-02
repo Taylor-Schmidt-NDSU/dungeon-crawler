@@ -26,6 +26,6 @@ class Level():
 	#TODO make it move player and enemies to correct location		
 	def initialize(self):
 		self.map = Map()
-	generate_players():
+		
 	generate_enemies(num_of_enemies):
 	

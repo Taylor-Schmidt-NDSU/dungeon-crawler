@@ -5,14 +5,14 @@ Created on Apr 12, 2018
 '''
 from level import Level
 from player import Player
-class Level_Manager():
+class LevelManager():
     '''
     classdocs
     '''
     
     instance = None
     
-    class __Level_Manager():
+    class __LevelManager():
         def __init__(self, players):
             self.level = self.load_level(1, players)
             
@@ -33,5 +33,5 @@ class Level_Manager():
         return getattr(self.instance, name)
     
     def __init__(self):
-        if not Level_Manager.instance:
-            Level_Manager.instance = Level_Manager.__LevelManager(Player())
+        if not LevelManager.instance:
+            LevelManager.instance = LevelManager.__LevelManager(Player())
