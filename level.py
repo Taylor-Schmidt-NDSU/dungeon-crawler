@@ -23,7 +23,7 @@ class Level():
 		for enemy in self.enemies:
 			enemy.update()
 	
-	#TODO make it move player and enemies to correct location		
+	#TODO: make it move player and enemies to correct location		
 	def initialize(self):
 		self.map = Map()
 	
