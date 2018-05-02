@@ -1,3 +1,5 @@
+import constants
+
 class Tile():
 	image = ""
 	location = (0,0)
@@ -9,6 +11,11 @@ class Tile():
 	def update(self):
 		#add generic update function if needed
 		pass
+	def draw(self, screen):
+		true_x_value = constants.TILE_WIDTH * self.location[0]
+		true_y_value = constants.TILE_HEIGHT * self.location[1]
+		screen.blit(self.image, (true_x_value, true_y_value))
+		
 class TrapTile(Tile):
 	def TrapTile(self, image, location, damage):
 		self.super(image, location)
