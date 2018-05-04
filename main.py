@@ -35,5 +35,5 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
             break
-        elif (event.type == pygame.KEYDOWN or event.type == pygame.KEYUP)
+        elif (event.type == pygame.KEYDOWN or event.type == pygame.KEYUP):
             level_manager.handle_keyboard_event(event)
