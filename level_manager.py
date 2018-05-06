@@ -34,6 +34,9 @@ class LevelManager():
             
         def handle_keyboard_event(self, event):
             self.keystroke_manager.handle_keyboard_event(event)
+        
+        def update_level(self, screen):
+            self.level.update(screen)
 
     def __getattr__(self, name):
         return getattr(self.instance, name)
