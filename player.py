@@ -18,7 +18,7 @@ class Player(Character):
         Constructor
         '''
         
-        self.super.__init__(self.max_health)
+        super(Player, self).__init__(self.max_health)
         
         #Set movement flags all to false
         self.move_up_flag = False
@@ -35,3 +35,6 @@ class Player(Character):
             self.move_left(screen, self.vel)
         if self.move_right_flag:
             self.move_right(screen, self.vel)
+    
+    def draw(self, screen):
+        screen.blit(self.image, (self.location[0], self.location[1]))
