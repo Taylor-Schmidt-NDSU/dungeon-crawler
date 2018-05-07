@@ -13,7 +13,7 @@ class Player(Character):
     max_health = 100
     vel = 3
     
-    def __init__(self, params):
+    def __init__(self):
         '''
         Constructor
         '''
@@ -36,5 +36,4 @@ class Player(Character):
         if self.move_right_flag:
             self.move_right(screen, self.vel)
     
-    def draw(self, screen):
-        screen.blit(self.image, (self.location[0], self.location[1]))
+   
