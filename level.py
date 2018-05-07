@@ -4,28 +4,21 @@ import constants
 
 class Level():
 	map
-	players = []
 	enemies = []
 	
-	def __init__(self, level_number, players):
+	def __init__(self, level_number):
 
 		#TODO: dynamically create enemies based on level_number
-		for player in players:
-			self.players.append(player)
+		self.map = Map()
 		
-		#Will set up players, enemies, and map
-		self.initialize()
 		
-	def update(self):
+		
+	def update(self, screen):
 		self.map.update()
-		for player in self.players:
-			player.update()
 		for enemy in self.enemies:
-			enemy.update()
+			enemy.update(screen)
 	
 	#TODO: make it move player and enemies to correct location		
-	def initialize(self):
-		self.map = Map()
 	
 	def draw(self, screen):
 		#clear the screen
@@ -34,5 +27,3 @@ class Level():
 		self.map.draw(screen)
 		for enemy in self.enemies:
 			enemy.draw(screen)
-		for player in self.players:
-			player.draw(screen)

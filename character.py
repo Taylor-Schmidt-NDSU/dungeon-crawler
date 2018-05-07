@@ -11,12 +11,14 @@ class Character(GameSprite):
     '''
     
 
-    def __init__(self, max_health):
+    def __init__(self):
         '''
         Constructor
         '''
-        self.health = max_health
-        self.max_health = max_health
+        super(Character,self).__init__()
+        self.health = self.max_health
+        
+        
     
     def move_up(self, screen, vel = 3):
         #ensures char cannot move off of screen

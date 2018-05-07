@@ -24,9 +24,10 @@ done = False
 # -------- Main Program Loop -----------
 while not done: 
     
-    
-    level_manager.draw_level()
-    level_manager.update_level()
+    screen.fill(constants.WHITE)
+    level_manager.draw_level(screen)
+    level_manager.update_level(screen)
+    pygame.display.flip()
     
     clock.tick(60)
     

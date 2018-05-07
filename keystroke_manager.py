@@ -11,19 +11,18 @@ class KeystrokeManager(object):
     '''
     
 
-    def __init__(self, params):
+    def __init__(self):
         '''
         Constructor
         '''
-        #make sure player isn't moving
-        self.player_movement_flags = [False, False, False, False]
+        pass
         
-    def handle_event(self, event, level):
+    def handle_keyboard_event(self, event, level):
         if event.key in [pygame.K_w, pygame.K_a, pygame.K_s, pygame.K_d]:
             self.handle_movement(event, level)
             
-    def handle_movement(self, event, level): 
-        player_to_move = level.player[0]
+    def handle_movement(self, event, player_to_move): 
+        
         
         #key being pressed
         if event == pygame.KEYDOWN:

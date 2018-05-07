@@ -26,9 +26,9 @@ class GameSprite(pygame.sprite.Sprite):
 #         self.frames = self.get_frames_from_sheet(self.frame_image, (0,0), (self.frame_width, self.frame_height), columns, rows)
 #         self.image = self.frames[0]
 #         self.image_count = 1
-    def __init__(self, image_name):
+    def __init__(self):
         super().__init__()
-        self.image = pygame.image.load(image_name).convert_alpha()
+        self.image = pygame.image.load(self.image_name).convert_alpha()
           
     def get_frames_from_sheet(self, sheet, start, sprite_size, columns, rows = 1):
         
@@ -44,5 +44,6 @@ class GameSprite(pygame.sprite.Sprite):
         
         return frames
     
-    def draw(self, screen):  
-        screen.blit(self.image, (self.location[0], self.location[1]))
+    def draw(self, screen): 
+        print("Drawing sprite at " + str(self.location))  
+        screen.blit(self.image, self.location)

@@ -9,7 +9,7 @@ class Player(Character):
     '''
     classdocs
     '''
-    
+    image_name = "res/tile.png"
     max_health = 100
     vel = 3
     
@@ -18,7 +18,9 @@ class Player(Character):
         Constructor
         '''
         
-        super(Player, self).__init__(self.max_health)
+        super(Player, self).__init__()
+        
+        self.location = (30,30)
         
         #Set movement flags all to false
         self.move_up_flag = False
